@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "name": "my-viteron-app",
+  "description": "My application description",
+  "version": "1.0.0",
+  "author": "Shiono Yoshihide <shiono.yoshihide@gmail.com>",
+  "main": "app/background.js",
+  "scripts": {
+    "dev": "viteron",
+    "build": "viteron build",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.3",
+    "electron": "^11.0.3",
+    "electron-builder": "^22.9.1",
+    "electron-serve": "^1.0.0",
+    "electron-store": "^6.0.1",
+    "vite": "1.0.0-rc.13",
+    "viteron": "0.0.0",
+    "vue": "3.0.3"
+  }
+}

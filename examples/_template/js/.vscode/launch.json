@@ -1,0 +1,40 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "viteron:main",
+      "type": "node",
+      "request": "attach",
+      "protocol": "inspector",
+      "port": 9292,
+      "skipFiles": ["<node_internals>/**"],
+      "sourceMapPathOverrides": {
+        "webpack:///./~/*": "${workspaceFolder}/node_modules/*",
+        "webpack:///./*": "${workspaceFolder}/*",
+        "webpack:///*": "*"
+      }
+    },
+    {
+      "name": "viteron:renderer",
+      "type": "pwa-chrome",
+      "request": "attach",
+      "port": 5858,
+      "timeout": 10000,
+      "urlFilter": "http://localhost:*",
+      "webRoot": "${workspaceFolder}/app",
+      "sourceMapPathOverrides": {
+        "webpack:///./src/*": "${webRoot}/*"
+      }
+    }
+  ],
+  "compounds": [
+    {
+      "name": "viteron:all",
+      "preLaunchTask": "dev",
+      "configurations": ["viteron:main", "viteron:renderer"]
+    }
+  ]
+}

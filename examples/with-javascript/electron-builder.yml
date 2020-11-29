@@ -1,0 +1,12 @@
+appId: com.example.viteron
+productName: My Viteron App
+copyright: Copyright © 2020 Shiono Yoshihide
+directories:
+  output: dist
+  buildResources: resources
+files:
+  - from: .
+    filter:
+      - package.json
+      - app
+publish: null
