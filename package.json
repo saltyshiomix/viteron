@@ -1,6 +1,6 @@
 {
   "name": "viteron",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "⚡ vite + electron ⚡",
   "repository": "git@github.com:saltyshiomix/viteron.git",
   "author": "Shiono Yoshihide <shiono.yoshihide@gmail.com>",
