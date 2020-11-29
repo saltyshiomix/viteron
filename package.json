@@ -1,0 +1,67 @@
+{
+  "name": "viteron",
+  "version": "0.0.0",
+  "description": "⚡ vite + electron ⚡",
+  "repository": "git@github.com:saltyshiomix/viteron.git",
+  "author": "Shiono Yoshihide <shiono.yoshihide@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/saltyshiomix/viteron",
+  "keywords": [
+    "electron",
+    "vite",
+    "vitejs",
+    "vue",
+    "vuejs",
+    "viteron"
+  ],
+  "bugs": {
+    "url": "https://github.com/saltyshiomix/viteron/issues",
+    "email": "shiono.yoshihide@gmail.com"
+  },
+  "files": [
+    "bin",
+    "babel.js"
+  ],
+  "bin": {
+    "viteron": "bin/viteron.js"
+  },
+  "scripts": {
+    "predev": "npm run build",
+    "dev": "node dev",
+    "prebuild": "rimraf bin",
+    "build": "rollup -c",
+    "prepublishOnly": "cross-env NODE_ENV=production npm run build"
+  },
+  "dependencies": {
+    "@babel/core": "7.12.9",
+    "@babel/plugin-proposal-class-properties": "7.12.1",
+    "@babel/plugin-proposal-object-rest-spread": "7.12.1",
+    "@babel/plugin-proposal-optional-chaining": "7.12.7",
+    "@babel/plugin-transform-runtime": "7.12.1",
+    "@babel/preset-env": "7.12.7",
+    "@babel/preset-typescript": "7.12.7",
+    "@babel/runtime": "7.12.5",
+    "@babel/runtime-corejs3": "7.12.5",
+    "arg": "5.0.0",
+    "babel-loader": "8.2.2",
+    "chalk": "4.1.0",
+    "delay": "4.4.0",
+    "execa": "4.1.0",
+    "fs-extra": "9.0.1",
+    "webpack": "5.9.0",
+    "webpack-merge": "5.4.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "@types/fs-extra": "^9.0.4",
+    "@types/node": "^14.14.10",
+    "cross-env": "^7.0.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.34.0",
+    "rollup-plugin-auto-external": "^2.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "typescript": "^4.1.2"
+  }
+}
