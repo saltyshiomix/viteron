@@ -10,21 +10,13 @@ $ npm init nextron-app my-app --example with-javascript
 
 # with yarn
 $ yarn create nextron-app my-app --example with-javascript
-
-# with pnpx
-$ pnpx create-nextron-app my-app --example with-javascript
 ```
 
 ### Install Dependencies
 
 ```
 $ cd my-app
-
-# using yarn or npm
 $ yarn (or `npm install`)
-
-# using pnpm
-$ pnpm install --shamefully-hoist
 ```
 
 ### Use it
